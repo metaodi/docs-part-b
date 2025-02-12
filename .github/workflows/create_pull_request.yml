@@ -23,6 +23,8 @@ jobs:
           
       - name: Update Part B files
         run: |
+          tree
+          ls -l
           ls -l docs_all
           cp -r b/* docs_all/b/
 
