@@ -35,9 +35,11 @@ jobs:
           title: 'Docs Update - Part B'
           body: 'Documentation update from part B'
           path: docs-all
+          add-paths: b
           branch: 'docs-b-update'
           base: 'main'
           draft: false
+          assignees: mchaamsler
           
       - name: Check outputs
         if: ${{ steps.cpr.outputs.pull-request-number }}
