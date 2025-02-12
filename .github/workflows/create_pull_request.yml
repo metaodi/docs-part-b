@@ -22,7 +22,9 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           
       - name: Update Part B files
-        run: cp -r b/* docs_all/b/
+        run: |
+          ls -l docs_all
+          cp -r b/* docs_all/b/
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
