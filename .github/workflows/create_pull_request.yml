@@ -32,8 +32,10 @@ jobs:
         id: cpr
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           title: 'Docs Update - Part B'
-          body: 'Documentation update from part B'
+          body: |
+            Documentation update from [part B](https://github.com/metaodi/docs-part-b)
           path: docs-all
           add-paths: b
           branch: 'docs-b-update'
